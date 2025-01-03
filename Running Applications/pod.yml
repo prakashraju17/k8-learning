@@ -1,0 +1,20 @@
+apiVsersion: v1 ##this should be diff for other platforms 
+kind: Pod     ## always starts with captial letter
+metadata:
+  name: pod
+  labels:
+    app: first-pod
+spec:
+  containers:
+  - image: nginx
+    name: nginx-c
+    ports:
+    - containerPort: 80
+
+
+
+# k get po -A >> to list of the all the pods
+# k get po -n namespacename >>> to list of the all the pods
+# k logs <podname> -n <namespace name>
+# k get po <podname> -n <<namespace name>
+#k describe po <podname> -n <namespace>
